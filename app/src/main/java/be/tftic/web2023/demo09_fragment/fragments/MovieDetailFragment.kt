@@ -65,6 +65,8 @@ class MovieDetailFragment private constructor() : Fragment() {
 
         if(movie == null) {
             binding.lvFragMovieDetailTitle.setText(R.string.film_not_found)
+            binding.lvFragMovieDetailRelease.setText("")
+            binding.lvFragMovieDetailDesc.setText("")
             return
         }
 
