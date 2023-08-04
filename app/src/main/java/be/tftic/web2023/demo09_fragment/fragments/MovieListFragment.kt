@@ -1,13 +1,13 @@
 package be.tftic.web2023.demo09_fragment.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.fragment.app.Fragment
 import be.tftic.web2023.demo09_fragment.R
 import be.tftic.web2023.demo09_fragment.databinding.FragmentMovieListBinding
 import be.tftic.web2023.demo09_fragment.models.Movie
@@ -19,7 +19,8 @@ import be.tftic.web2023.demo09_fragment.services.MovieService
  * Use the [MovieListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MovieListFragment : Fragment(), AdapterView.OnItemClickListener {
+class MovieListFragment private constructor(): Fragment(),
+    AdapterView.OnItemClickListener {
 
     companion object {
         @JvmStatic
@@ -80,4 +81,5 @@ class MovieListFragment : Fragment(), AdapterView.OnItemClickListener {
         val movie = parent.adapter.getItem(position) as Movie
         onMovieSelectListener?.onMovieSelected(movie.Id)
     }
+
 }
