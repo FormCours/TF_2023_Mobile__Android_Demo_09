@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         loadInitialFragment()
 
         // Snackbar.make(findViewById(R.id.layout_main), "Test", Snackbar.LENGTH_LONG).show()
-        Snackbar.make(binding.layoutMain, "Test", Snackbar.LENGTH_LONG).show()
+        // Snackbar.make(binding.layoutMain, "Test", Snackbar.LENGTH_LONG).show()
     }
 
     private fun loadInitialFragment() {
